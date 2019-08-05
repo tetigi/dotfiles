@@ -1,7 +1,8 @@
-set-option -g default-command "reattach-to-user-namespace -l zsh"
+#set-option -g default-command "reattach-to-user-namespace -l zsh"
 set-option -g default-shell /bin/zsh
-set -g default-terminal "screen-256color"
+set -g default-terminal "gnome-terminal"
 bind R source-file ~/.tmux.conf \; display-message "Config reloaded..."
+set -sg escape-time 0
 
 # Change keybinding for key stuff
 set-option -g prefix C-q
@@ -17,7 +18,7 @@ setw -g mode-keys vi
 setw -g monitor-activity on
 setw -g window-status-format "#[fg=white]#[bg=colour238] #I #[bg=colour238]#[fg=white] #W "
 setw -g window-status-current-format "#[bg=colour202]#[fg=white] *#I #[fg=white,bold]#[bg=colour208] [#W] "
-setw -g window-status-content-attr bold,blink,reverse
+#setw -g window-status-content-attr bold,blink,reverse
 
 #------------
 # status bar
